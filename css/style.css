@@ -1,0 +1,167 @@
+@charset "utf-8";
+
+body {
+    background: #191818;
+    font-family: "나눔 명조", serif;
+    position: relative;
+    height: 4000px;
+}
+section {
+    width: 100%;
+    position: absolute;
+}
+#header {}
+#main {
+    top: 0;
+    background: url(../img/poster.png) no-repeat center top /cover;
+    height: 1600px;
+}
+#story {
+    background: #191818;
+    top: 1600px;
+    padding: 150px 0;
+    height: 1400px;
+}
+
+/* 헤더영역 */
+.header{
+    position: relative;
+    z-index: 10;
+}
+.header h1{
+    position: absolute;
+    top: 50px; left: 50px;
+}
+.header h1 a img {width: 300px;}
+
+.nav {
+    position: absolute;
+    top: 50px; right: 50px;
+}
+.nav .menu_icon a.ham {
+    display: block;
+    padding: 15px 12px;
+    background-color: #191818;
+}
+.nav .menu_icon a.ham .bar {
+    display: block;
+    width: 28px;
+    height: 4px;
+    background-color: #fff;
+}
+.nav .menu_icon a.ham .bar:first-child {margin-bottom: 7px;}
+
+
+/* 메인 섹션 */
+.main {
+    width: 100%; 
+    height: 100%;
+    position: relative;
+}
+.main .happy {
+    position: absolute;
+    top: 300px; left: 14%;
+    background: #191818;
+}
+.main .happy p {
+    font-size: 48px;
+    color: #fff;
+    padding: 0.2em 0.4em;
+}
+
+.main .winner {
+    position: absolute;
+    right: 5%;
+    bottom: 20%;
+}
+.main .winner ul {}
+.main .winner ul li {
+    margin-bottom: 30px;
+    text-align: center;
+}
+.main .winner ul li em {
+    display: block;
+    margin: 0 auto;}
+.main .winner ul li em.cannes {
+    width: 170px;
+    height: 100px;
+    background-position: 10px -10px;
+}
+.main .winner ul li em.bafta {
+    width: 170px;
+    height: 80px;
+    background-position: 320px -5px;
+}
+.main .winner ul li em.goldenglobe {
+    width: 170px;
+    height: 110px;
+    background-position: -5px -110px;
+}
+.main .winner ul li em.oscars {
+    width: 250px;
+    height: 90px;
+    background-position: 312px -110px;
+}
+
+
+/* 스토리 영역 */
+.story {
+    color: #fff;
+    position: relative;
+    text-align: center;
+}
+.story h2 {
+    font-size: 60px;
+    text-align: center;
+    margin-bottom: 1.5em;
+    transition: 0.3s;
+}
+.story .story_contents {
+    position: absolute;
+    transition: 0.3s;
+}
+.story .story_contents.part1 {
+    top: 450px; 
+    left: 50%;
+    transform: translateX(-95%);
+    transition-delay: 0.3s;
+}
+.story .story_contents.part2 {
+    top: 200px;
+    right: 50%;
+    transform: translateX(95%);
+    z-index: -10;
+}
+.story .story_contents p {
+    font-size: 32px;
+    line-height: 1.4;
+}
+.story .story_contents.part1 p {margin-top:2em;}
+.story .story_contents.part2 p {margin-bottom:2em;}
+.story .story_contents img {width: 750px;}
+
+.hide{
+    opacity: 0;
+    visibility: hidden;
+}
+.story > div.show, h2.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* 미디어쿼리 */
+@media (max-width: 1290px) {
+}
+@media (max-width: 1024px) {
+}
+@media (max-width: 960px) {
+}
+@media (max-width: 768px) {
+} 
+@media (max-width: 600px) {
+}
+@media (max-width: 480px) {
+}
+@media (max-width: 320px) {
+}
