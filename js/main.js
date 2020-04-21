@@ -1,5 +1,6 @@
 $(function () {
     // scroll event
+    /*
     var $section = $(".pr"); // 제어할 대상
     var sectionInfo = []; //각ㄱ가의 섹션이 브라우저 상단으로 떨어진 거리를 담는 배열.
 
@@ -25,4 +26,12 @@ $(function () {
             $this.css({top:$newTop});
         })
     })
+    */
+    /*
+   $(".main .obj1").css({top:"100px",opacity:1});
+   $(".main .obj2").css({left:"42%",opacity:1});
+    $(".main .obj3").css({left:"0"});
+    $(".happy").css({opacity:"1"})
+    */
+    
 }); 

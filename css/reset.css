@@ -149,5 +149,3 @@ input:checked[type=checkbox] {
 .mt45 {margin-top: 45px !important;}
 .mt50 {margin-top: 50px !important;}
 
-/* 반응형 이미지 */
-img, video {width: 100%;}
