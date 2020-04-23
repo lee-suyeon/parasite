@@ -54,49 +54,44 @@
                     <img src="img/parasite.png" alt="parasite">
                 </div>
 
-
                 <nav class="nav">
                     <ul class="gnb">
                         <li class="active">
                             <a href="#">
-                                <span class="dot"></span><em class="menu">HOME</em>
+                                <span class="indicator"></span><em class="menu">HOME</em>
                             </a>
                         </li>
                         <li>
                             <a href="#">
-                                <span class="dot"></span><em class="menu">STORY</em>
+                                <span class="indicator"></span><em class="menu">STORY</em>
                             </a>
                         </li>
                         <li>
                             <a href="#">
-                                <span class="dot"></span><em class="menu">FAMILY1</em>
+                                <span class="indicator"></span><em class="menu">FAMILY1</em>
                             </a>
                         </li>
                         <li>
                             <a href="#">
-                                <span class="dot"></span><em class="menu">FAMILY2</em>
+                                <span class="indicator"></span><em class="menu">FAMILY2</em>
                             </a>
                         </li>
                         <li>
                             <a href="#">
-                                <span class="dot"></span><em class="menu">COMMENT</em>
+                                <span class="indicator"></span><em class="menu">COMMENT</em>
                             </a>
                         </li>
                         <li>
                             <a href="#">
-                                <span class="dot"></span><em class="menu">AWARD</em>
+                                <span class="indicator"></span><em class="menu">AWARD</em>
                             </a>
                         </li>
                         <li>
-                            <a href="#"><span class="dot"></span><em class="menu">TRAILER</em>
+                            <a href="#"><span class="indicator"></span><em class="menu">TRAILER</em>
                             </a>
                         </li>
                     </ul>
-                    <!-- <div class="gnbBtn">
-                        <a href="#"><span class="icon up"></span></a>
-                        <a href="#"><span class="icon down"></span></a>
-                    </div> -->
-                    <div class="page">
+                    <div class="page_num">
                         <strong class="number">01</strong>
                     </div>
                 </nav> <!--//nav-->
@@ -106,67 +101,73 @@
         <!-- //header -->
 
 
-        <section id="main">
-            <div class="container">
-                <div class="main">
-                    <div class="happy">
-                        <p>행복은 나눌수록 커지잖아요.</p>
+        <section id="main" class="page">
+            <div class="main">
+                <div class="poster">
+                    <h2>행복은 나눌수록 커지잖아요.</h2>
+                    <div class="poster_img">
+                        <img src="img/main.png" alt="포스터">
                     </div>
                     <div class="poster_obj">
                         <div class="obj1">
                             <img src="img/poster_obj1.png" alt="송강호">
                         </div>
                         <div class="obj2">
-                            <img src="img/poster_obj2.png" alt="최우식">
-                        </div>
-                        <div class="obj3">
                             <img src="img/poster_obj3.png" alt="조여정/이선균">
                         </div>
+                        <div class="obj3">
+                            <img src="img/poster_obj2.png" alt="최우식">
+                        </div>
                     </div> <!-- //poster_obj -->
-                </div> <!-- //main-->
+                </div> <!-- //poster-->
             </div> <!-- //main-->
         </section>
         
         <!-- stroy 영역 -->
-        <section id="story">
-            <div class="row">
-                <div class="story">
-                    <h2 class="title">“같이 잘 살면 안될까요? ”</h2>
-                    <div class="synopsis">
-                        <p>
-                            전원백수로 살 길 막막하지만 사이는 좋은 기택 가족. <br>
-                            장남 기우에게 명문대생 친구가 연결시켜 준 고액 과외 자리는 모처럼 싹튼 고정수입의 희망이다.
-                            온 가족의 도움과 기대 속에 박사장 집으로 향하는 기우.<br>
-                            글로벌 IT기업 CEO인 박사장의 저택에 도착하자 젊고 아름다운 사모님 연교가 기우를 맞이한다.
-                        </p>
-                        <p>
-                            그러나 이렇게 시작된 두 가족의 만남 뒤로, 걷잡을 수 없는 사건이 기다리고 있었으니…
-                        </p>
-                    </div>
-                    <div class="fam">
-                        <div class="fam_wrap">
-                            <img src="img/family.png" alt="기생충가족">
-                            <div class="bars">
-                                <span class="bar_black"></span>
-                                <span class="bar_black"></span>
-                                <span class="bar_black"></span>
-                                <span class="bar_black"></span>
-                                <span class="bar_white"></span>
-                                <span class="bar_white"></span>
-                                <span class="bar_white"></span>
-                                <span class="bar_white"></span>
-                            </div>
-                            <em>극과 극의 삶을 사는 두 가족의 만남이 빚어낸 신선한 스토리</em>
-                        </div> <!-- //family_wrap-->
-                    </div> <!-- //family -->
-                </div> <!--// story -->
-            </div> <!-- // row -->
+        <section id="story" class="page">
+            <div class="story">
+                <h3 class="title">
+                    <span>같이</span>
+                    <span>잘</span>
+                    <span>살면</span>
+                    <span>안될까요</span>
+                    <span>?</span>
+                </h3>
+                <div class="synopsis">
+                    <p>
+                        전원백수로 살 길 막막하지만 사이는 좋은 <em class="select black">기택 가족</em><br>
+                        장남 기우에게 명문대생 친구가 연결시켜 준 고액 과외 자리는 모처럼 싹튼 고정수입의 희망이다.
+                        온 가족의 도움과 기대 속에 <em class="select">박사장네</em> 집으로 향하는 기우.<br>
+                        글로벌 IT기업 CEO인 박사장의 저택에 도착하자 젊고 아름다운 사모님 연교가 기우를 맞이한다.
+                    </p>
+                    <p>
+                        그러나 이렇게 시작된 두 가족의 만남 뒤로, 걷잡을 수 없는 사건이 기다리고 있었으니…
+                    </p>
+                </div>
+                <div class="fam">
+                    <div class="fam_wrap">
+                        <img src="img/family.png" alt="기생충가족">
+                        <div class="bars">
+                            <span class="black"></span>
+                            <span class="black"></span>
+                            <span class="black"></span>
+                            <span class="black"></span>
+                            <span class="white"></span>
+                            <span class="white"></span>
+                            <span class="white"></span>
+                            <span class="white"></span>
+                        </div>
+                        <em>극과 극의 삶을 사는 두 가족의 만남이 빚어낸 신선한 스토리</em>
+                    </div> <!-- //family_wrap-->
+                </div> <!-- //family -->
+            </div> <!--// story -->
         </section>
        
+
         <!-- 가족소개 1  -->
-        <section id="family1">
+        <section id="family1" class="page">
             <div class="family family1">
-                <h2 class="title"><span class="icon"></span>기택이네</h2>
+                <h3 class="title"><span class="icon mark"></span>기택이네</h3>
                 
                 <div class="slide_container">
                     <div class="slide">
@@ -238,15 +239,19 @@
                         </div> <!-- //member -->
 
                     </div>  <!-- //slide -->
+                    <div class="slide_nav">
+                        <a href="#" class="prev"><span class="ir_so">prev</span></a>
+                        <a href="#" class="next"><span class="ir_so">next</span></a>
+                    </div>
                 </div>  <!-- //slide_container -->
             </div>  <!-- //family-->
         </section>
         <!-- //family1 -->
 
 
-        <section id="family2">
+        <section id="family2" class="page">
             <div class="family family2">
-                <h2 class="title"><span class="icon"></span>박사장네</h2>
+                <h3 class="title"><span class="icon mark"></span>박사장네</h3>
                 <div class="slide_container">
                     <div class="slide">
 
@@ -329,15 +334,19 @@
                             </div>  <!-- //character -->
                         </div> <!-- //member -->
                     </div>  <!-- //slide -->
+                    <div class="slide_nav">
+                        <a href="#" class="prev"><span class="ir_so">prev</span></a>
+                        <a href="#" class="next"><span class="ir_so">next</span></a>
+                    </div>
                 </div>  <!-- //slide_container -->
             </div>  <!-- //family -->
         </section>
         <!-- //family2 -->
         
 
-        <section id="comment">
+        <section id="comment" class="page">
             <div class="comment">
-                <h2 class="title"><span class="icon"></span>Director's Comment</h2>
+                <h3 class="title"><span class="icon mark"></span>Director's Comment</h3>
                 <div class="note">
                     <p>주인공들은 지금 여기, 마치 우리 옆집이나 옆 동네에 살고 있을 것만 같은 두 가족이다. 이 두 가족은 부모와 자녀로 
                         이뤄진 4인 구성이라는 닮은 점도 있지만 그 삶의 형편은 그야말로 극과 극이라 일상에서 만날 일도 엮일 일도 없어 보인다. 
@@ -348,7 +357,6 @@
                         선사하지만 &lt;기생충&gt; 인물 그 누구도 악한 의도를 가지고 있지 않다.</p>
                     <p>우리는 항상 상생 또는 공생을 바란다. 하지만 그것이 쉽지 않다는 것 또한 느낀다. 그것은 개인의 의지나 잘잘못과 무관한 
                         것이 되었다. 봉준호 감독은 현재의 자본주의 사회를 살아가고 있는 우리에게 ‘함께 잘 산다’는 것에 대해 그만의 방식으로 질문을 던진다.</p>
-                    </p>
                 </div>
                 <div class="item">
                     <div class="stone">
@@ -366,7 +374,7 @@
         <!-- //comment -->
 
 
-        <section id="winner">
+        <section id="winner" class="page">
             <div class="winner">
                 <h3><span class="shining">PARASITE IS
                     BEST PICTURE OSCARS
@@ -400,7 +408,7 @@
         </section>
         <!-- //winner  -->
 
-        <footer id="footer">
+        <footer id="footer" class="page">
             <div class="footer">
                 <div class="trailer">
                     <iframe width="1080" height="605" src="https://www.youtube.com/embed/jBdRhhSt3Bc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -427,6 +435,7 @@
                 <div class="award">
                     <div class="bulb">
                         <img src="img/bulb.png" alt="전구">
+                        <div class="light"></div>
                     </div>
                     <ul>
                         <li class="active">
