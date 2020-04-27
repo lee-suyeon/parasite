@@ -1,5 +1,5 @@
 $(function () {
-    
+    /*
     $("h1").click(function (e) {
         e.preventDefault();
         goToHome();
@@ -12,7 +12,7 @@ $(function () {
         $("html").animate({ "scrollTop" : 0}, 10);
     }
         
-
+    */
     // main
     var $posterObj = $(".main .poster_obj > div");
 
@@ -41,6 +41,11 @@ $(function () {
         } else {
             $bar.filter(".white").css({"width":"0"});
         }
+    });
+    $(".summary").hover(function () {
+        $bar.css({"width":"140px"});
+    },function () {
+        $bar.css({"width":"0"});
     })
     
 
@@ -175,7 +180,18 @@ $(function () {
             $navNext.css("display","block");
         }
     }
-
-
-
+    
+    var $award = $(".award > ul > li"),
+        awardCount = $award.length;
+    /*
+    window.setInterval(showAward, 1500);
+    index = 0;
+    $award.eq(0).css({display:"block"});
+    function showAward () {
+        $award.eq(index).fadeIn().siblings().fadeOut();
+        index++;
+        index %= awardCount;
+    }
+    
+    */
 }); 

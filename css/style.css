@@ -14,7 +14,8 @@ h3.title {
     font-size: 54px;
     color: #fff;
     position: absolute;
-    top: 17%; left: 10%;
+    top: 14%; left: 7%;
+    font-weight: bold;
 }
 h3.title > span.mark {
     display: inline-block;
@@ -37,13 +38,8 @@ h3.title > span.mark {
 }
 .header.sticky {position: fixed;}
 .header.sticky h1 a img {width: 150px;}
-.header.sticky .filmBy {display: none;}
 .header.sticky .parasite {
-    position: absolute;
-    top: 100px; right: -23px;
-    /* transform: rotate(90deg); */
     display: none;
-    transition: 0.3s;
 }
 
 .header h1 a img {width: 250px;}
@@ -65,10 +61,10 @@ h3.title > span.mark {
 /* nav 영역 */
 .nav {
     position: fixed;
-    top: 40%; right: 0;
+    top: 35%; right: 0;
     z-index: 999;
 }
-.nav .gnb {margin-bottom: 250px;}
+.nav .gnb {margin-bottom: 300px;}
 .nav .gnb li {
     position: relative;
     padding-left: 20px;
@@ -206,11 +202,24 @@ h3.title > span.mark {
 }
 .story .synopsis p em {
     display: inline-block;
-    font-size: 34px;
-    font-weight: bold;
+    font-size: 30px;
     background: black;
     line-height: 1.4;
-    padding: 0 0.2em;
+    font-weight: 400;
+    padding: 0.2em 0.5em;
+}
+.story .summary {
+    position: absolute;
+    left: 5%; bottom: 12%;
+    display: block;
+    font-size: 30px;
+    padding: 0.5em;
+    background-color: black;
+    color: #fff;
+    z-index: 100;
+}
+.story .summary:hover {
+
 }
 .story .fam {
     position: absolute;
@@ -235,15 +244,7 @@ h3.title > span.mark {
 .story .fam .fam_wrap .bars .white:nth-child(7) {top: 390px; left: 388px;}
 .story .fam .fam_wrap .bars .white:nth-child(8) {top: 405px; left: 590px;}
 
-.fam .fam_wrap em {
-    position: absolute;
-    left: 15%; bottom: 100px;
-    display: block;
-    font-size: 30px;
-    padding: 0.5em;
-    background-color: black;
-    color: #fff;
-}
+
 
 /* 가족1 */
 #family1 {background: url(../img/gthouse.png) no-repeat center top 140px /cover;}
@@ -357,38 +358,158 @@ h3.title > span.mark {
 .family2 .member.dh .character .desc {left: 72%;}
 
 
-/* comment */
-#comment {background: #447d52;}
-.comment {}
-.comment h3.title {
-    top: 10%;
-    left: 50%;
-    transform: translateX(-50%);
+/* metaphor */
+#metaphor {
+    background: #447d52;
 }
-.comment .note {
+.metaphor {
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.metaphor h3.title {
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+}
+.metaphor .item > div {
     position: absolute;
-    top: 25%; left: 50%;
+    top: 40%; left: 50%;
     transform: translateX(-50%);
-    width: 35%;
 }
-.comment .note p {
+.metaphor .item > div p {
+    font-size: 22px;
+    background-color: #fff;
+    padding: 0.7em;
+    border-radius: 15px;
+    line-height: 1.4;
+    box-sizing: border-box;
+}
+.metaphor .item div.smell {
+    top: 55%;
+}
+.metaphor .item div.smell img {
+    width: 350px;
+}
+.metaphor .item div.smell p {
+    width: 430px;
     color: #fff;
-    font-size: 24px;
-    line-height: 1.6;
-    margin-bottom: 30px;
+    text-align: center;
+    background: none;
 }
-.comment .item > div {position: absolute;}
-.comment .item > div.stone {
-    top: 15%; left: 7%;
+.metaphor .item div.smell em {
+    color: #fff;
+    font-size: 18px;
+    letter-spacing: 2px;
+    display: block;
+    text-align: center;
+}
+/* 돌 */
+.metaphor .item div.stone {
+    top: 20%; left: 18%;
+}
+.metaphor .item div.stone em {
+    display: block;
+    background: url(../img/stone_black.png) no-repeat center center /cover;
+    width: 300px;
+    height: 217px;
+    margin: 0 auto;
+    transition: 0.3s;
+}
+.metaphor .item div.stone:hover em {
+    background: url(../img/stone.png) no-repeat center center /cover;
     animation: floating 5s linear infinite;
 }
-.comment .item > div.painting {
-    top: 40%; right: 12%;
-    animation: swing ease-in-out 2s infinite alternate;
+.metaphor .item div.stone p {
+    position: absolute;
+    top: 10px; left: 215px;
+    width: 350px;
 }
-.comment .item > div.legs {
-    bottom: 5%; left: -3%;
-    animation: slide ease-out 5s infinite alternate;
+
+/* 그림 */
+.metaphor .item div.painting {
+    top: 56%; left: 80%;
+}
+.metaphor .item div.painting em {
+    display: block;
+    background: url(../img/painting_black.png) no-repeat center center /cover;
+    width: 300px;
+    height: 348px;
+    margin: 0 auto;
+    transition: 0.3s;
+}
+.metaphor .item div.painting:hover em {
+    background: url(../img/painting.png) no-repeat center center /cover;
+    animation: swing ease-in-out 3s infinite alternate;
+}
+.metaphor .item div.painting p {
+    position: absolute;
+    top: 60px; left: 215px;
+    width: 185px;
+    text-align: center;
+}
+
+
+/* 다리 */
+.metaphor .item > div.legs {
+    top: 63%; left: 11%
+}
+.metaphor .item div.legs em {
+    display: block;
+    background: url(../img/legs_black.png) no-repeat center center /cover;
+    width: 550px;
+    height: 251px;
+    margin: 0 auto;
+}
+.metaphor .item div.legs:hover em {
+    background: url(../img/legs.png) no-repeat center center /cover;
+    animation: slide ease-in-out 5s infinite alternate;
+}
+.metaphor .item div.legs p {
+    position: absolute;
+    top: 220px;
+    left: 250px;
+    width: 350px;
+}
+/* 전구 */
+.metaphor .item > div.bulb {
+    top: -13%;
+    left: 65%
+}
+.metaphor .item div.bulb em {
+    display: block;
+    background: url(../img/bulb_black.png) no-repeat center bottom /cover;
+    width: 71px;
+    height: 500px;
+    margin: 0 auto;
+    transition: 0.3s;
+}
+.metaphor .item div.bulb:hover em {
+    background: url(../img/bulb.png) no-repeat center bottom /cover;
+}
+.metaphor .item div.bulb:hover span.light {
+    animation: lighting 1.5s infinite alternate;
+    animation-delay: 0.3s;
+}
+.metaphor .item div.bulb p {
+    position: absolute;
+    top: 435px; left: 120px;
+    width: 120px;
+    text-align: center;
+}
+.metaphor .item div.bulb span.light{
+    position: absolute;
+    bottom: 5px; left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    width: 70px;
+    height: 70px;
+    background: rgba(255, 233, 173, 0.7);
+    border-radius: 50%;
+    transition: 0.6s;
+    box-shadow:0px 2px 10px rgba(255, 233, 173,0.8),
+    0px 5px 50px rgba(255, 233, 173,0.8),
+    0px 8px 80px rgba(255, 233, 173,0.6),
+    0px 8px 120px rgba(255, 233, 173,0.6);
 }
 
 @keyframes floating {
@@ -396,13 +517,13 @@ h3.title > span.mark {
         transform: translateX(0px) rotate(-3deg);
     }
     25% {
-        transform: translateX(-15px) rotate(3deg);
+        transform: translateX(-30px) rotate(3deg);
     }
     50% {
         transform: translateX(0px) rotate(-3deg);
     }
     75% {
-        transform: translateX(15px) rotate(3deg);
+        transform: translateX(30px) rotate(3deg);
     }
     100% {
         transform: translateX(0px) rotate(-3deg);
@@ -411,6 +532,9 @@ h3.title > span.mark {
 
 @keyframes swing {
     0% {
+        transform: rotate(0deg)
+    }
+    50%{
         transform: rotate(6deg)
     }
     100% {
@@ -419,19 +543,27 @@ h3.title > span.mark {
 }
 @keyframes slide {
     0% {
-        transform: translateX(-150px);
+        transform: translateX(0px);
     }
-    /* 50% {
-        transform: translateX(50px);
+    50% {
+        transform: translateX(-200px);
     }
-    75%{
-        transform: translateX(-250px);
-    } */
+    75% {
+        transform: translateX(-100px);
+    }
     100% {
-        transform: translateX(-50px);
+        transform: translateX(-400px);
     }
 }
-
+@keyframes lighting {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+    
+}
 
 /* winner */
 #winner {
@@ -553,12 +685,12 @@ h3.title > span.mark {
 }
 .winner .interview {
     position: absolute;
-    top: -15%; right: -60%;
+    top: -10%; right: -60%;
 }
 .winner .interview p {
    display: none;
     color: #fff;
-    font-size: 54px;
+    font-size: 48px;
     line-height: 1.4;
     font-weight: bold;
     letter-spacing: 2px;
@@ -566,7 +698,7 @@ h3.title > span.mark {
 }
 .winner .trophy {
     position: absolute;
-    top: 67%; right: 5%;
+    top: 67%; right: 8%;
 }
 .winner .trophy ul {display: flex;}
 .winner .trophy ul li {
@@ -597,6 +729,10 @@ h3.title > span.mark {
     position: relative;
 }
 .footer {}
+.footer .wifi {
+    position: absolute;
+    bottom: 0; right: 0;
+}
 .footer .trailer {
     position: absolute;
     top: 50%; left: 50%;
@@ -638,29 +774,7 @@ h3.title > span.mark {
     width: 100%;
     display: block;
 }
-.award {
-    position: absolute;
-    top: 0;
-    left: 9%;
-}
-.award .bulb {
-    position: relative;
-}
-.award .bulb .light{
-    position: absolute;
-    bottom: 4px; left: 50%;
-    transform: translateX(-50%);
-    width: 70px;
-    height: 70px;
-    background: rgba(255, 233, 173, 0.7);
-    /* background: rgb(255, 233, 173); */
-    border-radius: 50%;
-    box-shadow:0px 2px 10px rgba(255, 233, 173,0.8),
-    0px 5px 50px rgba(255, 233, 173,0.8),
-    0px 8px 80px rgba(255, 233, 173,0.6),
-    0px 8px 120px rgba(255, 233, 173,0.6);
-    animation: lighting 1.5s infinite alternate;
-}
+
 
 @keyframes lighting {
     0% {
@@ -675,18 +789,19 @@ h3.title > span.mark {
     
 }
 
-.award ul {}
-.award ul li.active {
-    display: block;
-}
-.award ul li {
-    display: none;
+.award {
     position: absolute;
-    bottom: -23%;
-    left: -100%;
+    top: 50%; left: 12%;
+    transform: translate(-50%, -50%);
+}
+.award ul {}
+.award ul li {
+    position: absolute;
+    display: block;
 }
 .award ul li span {
     display: block;
+    margin: 0 auto;
 }
 .award ul li span.cannes {
     width: 170px;
