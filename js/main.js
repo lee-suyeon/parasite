@@ -1,132 +1,130 @@
 $(function () {
 
-    $("html,body").stop().animate({scrollTop:0}, 10);
-
-// main wheel event 
-var $mainView = $(".main-box"),
-    frontView = $mainView.find(".front-view");
-
-var count = 0,
-    steps = 15;
-
-$mainView.on("mousewheel", function (e, delta) {
-    e.preventDefault();
-    e.stopPropagation();
-
-    if($mainView.find(".bar").outerWidth() < 700) return false;
-
-    if(delta > 0){
-        if(count > 0){
-            count--;
-        }
-    } else{           
-        count++;  
+    // goToHome
+    function goToHome () {
+        $("html,body").stop().animate({scrollTop:0}, 100);
     }
+    //goToHome ();
 
-    var visible = frontView.css("opacity");
-    console.log(visible);
-    if(count == steps){
-        frontView.css({display:"none"});
+    $(".title-kor").click(function (e) {
+        e.preventDefault();
+        goToHome ();
+    });
+
+
+
+    // main event 
+    var $mainView = $(".main-box"),
+        frontView = $mainView.find(".front-view");
+
+    var count = 0,
+        steps = 15;
+
+    frontView.find(".title-en").addClass("active");
+
+    $mainView.on("mousewheel", function (e, delta) {
+        e.preventDefault();
+        e.stopPropagation();
+
+        if($mainView.find(".bar").outerWidth() < 700) return false;
+
+        if(delta > 0){
+            if(count > 0){
+                count--;
+            }
+        } else{           
+            count++;  
+        }
+
+        frontView.css({opacity: 1 - (count * 0.1)});
+        $mainView.find(".poster-bg").css({filter : "grayscale(" + count * 10 + "%)"});
+
+        if(count == steps){
+            frontView.css({display:"none"});
+            $(this).off("mousewheel");
+        } 
+    });
+
+
+    // menu click event
+    var $nav = $(".nav"),
+        menu = $nav.find(".gnb .menu li");
+
+    $nav.click(function (e) {
+        e.preventDefault();
+        $(this).find(".ico-menu").toggleClass("active");
+    });
+
+    // menu hover event
+    menu.hover(function () {
         $(this).addClass("active");
-        $(this).off("mousewheel");
-    } 
-    frontView.css({opacity: 1 - (count * 0.1)});
-    $mainView.find(".poster-bg").css({filter : "grayscale(" + count * 10 + "%)"});
-});
+    },function () {
+        $(this).removeClass("active");
+    });
 
-// main animation
-frontView.find(".title-en").addClass("active");
+   
 
-// menu click event
-var $nav = $(".nav"),
-    menu = $nav.find(".gnb .menu li");
+    // wheel event - page 
 
-$nav.click(function (e) {
-    e.preventDefault();
-    $(this).find(".ico-menu").toggleClass("active");
-});
+    var $page = $(".page > div");
+    var lastPage = $page.length;
+    var pageIndex = 0;
+    var scrolling = false; 
 
-// menu hover event
-menu.hover(function () {
-    $(this).addClass("active");
-},function () {
-    $(this).removeClass("active");
-});
-
-// menu 
-
-menu.click(function (e) {
-    e.preventDefault();
-    var idx = $(this).index();
-    var section = $page.eq(idx);
-    var sectionDistance = section.offset().top;
-
-    $("html,body").stop().animate({scrollTop:sectionDistance}, 200);
-
-})
+     // menu 
+     menu.click(function (e) {
+        e.preventDefault();
+        var idx = $(this).index();
+        var section = $page.eq(idx);
+        var sectionDistance = section.offset().top;
 
 
 
-// wheel event - page 
-window.addEventListener("wheel", function (e) { e.preventDefault();}, {passive: false});
+        $("html,body").stop().animate({scrollTop:sectionDistance}, 200,
+            function () {
+            pageIndex = idx;
+        });
+        
+    });
 
-var pageIndex = 0;
-var $page = $(".page > div");
-var lastPage = $page.length;
+    window.addEventListener("wheel", function (e) { e.preventDefault();}, {passive: false});
 
-var scrolling = false; 
+    $(window).on("mousewheel", function (event) {
 
-
-
-    $(window).on("wheel", function () {
         if(scrolling) return;
-        //console.log(pageIndex);
-        if(event.deltaY < 0){
+
+        if(event.deltaY > 0){
             if(pageIndex <= 0) return;
             pageIndex--;
-        } else {   
+        } else {           
             if(pageIndex >= lastPage - 1) return;
-            pageIndex++;
-        }
-        var scrollTop = $(window).height() * pageIndex;
-        //console.log("pageIndex",pageIndex)
-
-        if(pageIndex == 1){
-            $(".together").addClass("active");
+            pageIndex++;  
         }
 
+        var scrollTop = $(window).height() * pageIndex,
+            pagePos = $page.eq(pageIndex).offset().top;
 
         scrolling = true;
 
         $("html").animate({"scrollTop" : scrollTop}, function () {
             scrolling = false;
         });
+
+        if(scrollTop >= pagePos){
+            $page.eq(pageIndex).addClass("active");
+        }
+
+        function sickyLogo () {
+            if(scrollTop > 0){
+                $mainView.find(".title-kor").addClass("sticky");
+            } else {
+                $mainView.find(".title-kor").removeClass("sticky");
+            }
+        }
+        sickyLogo();
+
     });
 
-$(window).scroll(function (e) {
-    e.preventDefault();
-    var scrollTop = $(window).scrollTop();
-
-    $page.each(function () {
-        var pagePos = $(this).offset().top;
-        //console.log("scrollTop",scrollTop);
-        //console.log("pagePos",pagePos);
-        if(scrollTop == pagePos){
-            $(this).addClass("active");
-            //$(".award .winner .shining").addClass("animation");
-        }
-    })
-})
-
-    // top sticky 
-    $(window).scroll(function () {
-        var scrollTop = $(this).scrollTop();
-        if(scrollTop > 0){
-            $mainView.find(".title-kor").addClass("sticky");
-        } else {
-            $mainView.find(".title-kor").removeClass("sticky");
-        }
-    });
 
 
     //family slide
@@ -141,20 +139,19 @@ $(window).scroll(function (e) {
 
     $house.click(function (e) {
         e.preventDefault();
+
         var $this = $(this);
+
         $this.siblings().css({opacity:0});
+
         if($this.hasClass("gt-house")){
             $familySlide.eq(0).addClass("animation");
         } else {
             $familySlide.eq(1).addClass("animation");
         }
+    });
 
-        // $house.eq(1).css({opacity:0});
-        // $(this).find(".family-slide").css({transform:"translateX(-50%) scale(1)"});
-        // $(".house").css({top:"45%"});
-    })
-
-   
+    
 
     $familySlide.each(function () {
         var $this = $(this),
@@ -162,7 +159,7 @@ $(window).scroll(function (e) {
             $nav = $this.find(".slide-nav");
 
         var memberCount = member.length,
-        currentSlide = 0;
+            currentSlide = 0;
 
         member.eq(0).css("display","block");
 
@@ -186,13 +183,13 @@ $(window).scroll(function (e) {
                 $("#family").removeClass("change");
             }
         });
-    
+
         function fadeOutSlide (index) {
             member.eq(index).fadeIn();
             member.eq(index).siblings().fadeOut();
             currentSlide = index;
         }
-    
+
         function hideNav () {
             if(currentSlide == 0){
                 $nav.find(".prev").css({display:"none"});
@@ -205,28 +202,16 @@ $(window).scroll(function (e) {
                 $nav.find(".next").css({display:"block"});
             }
         }
-    
+
         hideNav();
 
     });
-        
+            
 
+    // award trophy event
 
-
-    
-
-
-
-
-// 트로피 클릭 이벤트
-// 포스터를 클릭하면 
-// 트로피가 1개 나온다
-// 또 클릭하면 2번째가 나온다..
-// 다 클릭하면 봉준호가 나온다. 
-
-var $trophy = $(".trophy ul li");
-var trophyIndex = 0;
-    
+    var $trophy = $(".trophy ul li");
+    var trophyIndex = 0;
 
 
     $(".oscars").click(function (e) {
@@ -234,9 +219,6 @@ var trophyIndex = 0;
         showTrophy(trophyIndex);
         trophyIndex++;
         if(trophyIndex == $trophy.length + 1){
-            var $this = $(this);
-            // var imgUrl = $this.find("a").attr("href");
-            // $this.find(".empty").attr("src",imgUrl);
             $(this).hide();
             $(".bong").addClass("active");
         }
@@ -248,27 +230,115 @@ var trophyIndex = 0;
         trophyIndex = index;
     }
 
-
-// metaphor click event 
+    // metaphor click event 
     var $item = $(".item > div");
 
-    //아이템을 클릭하면
-    // a 태그의 href 속성을 불러와서
-    // img src를 a태그이 href 속성에 대입한다.
-
     $item.click(function (e) {
-        $this = $(this);
         e.preventDefault();
+        $this = $(this);
         
         var imgUrl = $this.find("a").attr("href");
         $this.find("img").attr("src",imgUrl);
         $this.addClass("animation");
     });
 
-
-    //트레일러 클릭 이벤트
-
+    //trailer click event
     $(".sibling").click(function () {
-        $(".trailer").addClass("animation");
-    })
+        $(".view-box").addClass("animation");
+    });
+
+
+
+
+    // youtube  -----------------------------
+    
+        var $selector = {
+            body : $("body"),
+            overlay : $("#blackout"),
+            modal : $("#trailerModal"),
+            showButton : $("#showTrailer"),
+            hideButton : $("#hideTrailer")
+        };
+
+
+        // 플레이어 
+        var player = {
+            obj: null, // 플레이어 오브젝트
+            query : {
+                theme: "dark",
+                color: "white",
+                controls: 1, 
+                autoplay: 1,
+                enablejsapi: 1,
+                modestbranding: 0, // YouTube 로고 감춤
+                rel: 0,  // 관련 동영상 표시
+                showinfo: 0, // 제목, 업로더 감춤
+                iv_load_policy: 3 // 특수효과 감춤
+            },
+            visible: false
+        };
+
+        // hide, show btn
+        $selector.showButton.on("click", showPlayer);
+        $selector.hideButton.on("click", hidePlayer);
+
+
+        //YouTube API를 이용해 iframe을 생성
+        function setPlayer ( id ) {
+            player.obj = new YT.Player( "trailer", {
+                width: 480,
+                height: 282,
+                videoId: id,    
+                playerVars: player.query
+            });
+
+            // 처음 플레이어 크기 설정
+            resizePlayer();
+
+            // 리사이즈나 화면 회전시 플레이어 크기 다시 설정
+            $( window ).on( "resize orientationchange", function() {
+                resizePlayer();
+            });
+        };
+
+        // 화면 크기에 비례해 iframe의 크기 조절
+        function resizePlayer() {
+            var viewport = {}, frame = {}, modal = {};
+
+            viewport.width = $( window ).width();
+            viewport.height = $( window ).height();
+
+            frame.width = viewport.width;
+            frame.height = frame.width / 1.6; // 16 : 10
+
+            modal.top = ( ( viewport.height - frame.height ) / 2 ) + "px";
+            modal.left = "0px";
+
+            $selector.modal.css( modal );
+
+            player.obj.setSize( frame.width, frame.height );
+        }
+
+
+
+        // iframe 보이기
+        function showPlayer () {
+            if ( !player.obj ) {
+                setPlayer( $selector.showButton.data("youtube") );
+            }
+            $selector.body.addClass("modal-on");
+            $selector.overlay.show();
+            player.visible = true;
+        };
+
+        // iframe 감추기 
+        function hidePlayer () {
+            player.obj.stopVideo();
+            $selector.overlay.hide();
+            $selector.body.removeClass("modal-on");
+            player.visible = false;
+
+        };
+    
+
 });

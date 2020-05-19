@@ -1,27 +1,18 @@
 @charset "utf-8";
-html {font-size: 10px;}
-body,html {
+html {
     height: 100%;
+    font-size: 10px;
+}
+body {
+    height: 100%;
+    background: #272425;
+    font-family: "나눔스퀘어", serif;
 }
 img {
     display: block;
     width: 100%;
 }
-
-
-body {
-    position: relative;
-    background: #272425;
-    font-family: "나눔스퀘어", serif;
-}
-span.mark {
-    display: inline-block;
-    width: 2.6rem;
-    height: 2.1rem;
-    background: url(../img/mark_white.png) no-repeat center center /cover;
-    margin-right: 10px;
-}
-h3.page-title {
+h2.page-title {
     position: absolute;
     top: 50%;
     left: 0%;
@@ -30,6 +21,13 @@ h3.page-title {
     font-weight: bold;
     color: #fff;
     letter-spacing: 3px;
+}
+span.mark {
+    display: inline-block;
+    width: 2.6rem;
+    height: 2.1rem;
+    background: url(../img/mark_white.png) no-repeat center center /cover;
+    margin-right: 10px;
 }
 
 
@@ -77,8 +75,6 @@ h3.page-title {
     width: 120%;
     transition-delay: 1s;
 }
-.main-box .front-view .title-en h1 {}
-.main-box .front-view .title-en h1 img {}
 .main-box .front-view .title-en .bar {
     width: 0;
     height: 10%;
@@ -102,54 +98,6 @@ h3.page-title {
     top: 3rem; left: 3rem;
     width: 10%;
 }
-
-
-.main-box .back-view .poster {}
-.main-box .back-view .poster img {}
-
-.main-box .back-view .happy {
-    position: absolute;
-    top: 30%; left: 70%;
-    transform: translate(-50%, -50%);
-    opacity: 0;
-    visibility: hidden;
-    transition: 1s;
-}
-.main-box .back-view .happy em {
-    display: block;
-    font-size: 3rem;
-    padding: 1rem 2rem;
-    background-color: black;
-    letter-spacing: 5px;
-    color: #fff;
-    z-index: 10;
-}
-.main-box.active .back-view .happy {
-    top: 25%;
-    opacity: 1;
-    visibility: visible;
-}
-
-.main-box .sub-title {
-    top: 0; left: 0;
-    width: 100%;
-    height: 100%;
-    background: #272425;
-    z-index: 10;
-}
-.main-box .sub-title h2 {
-    position: absolute;
-    top: 50%; left: 5%;
-    transform: translateY(-50%);
-    color: #fff;
-    font-size: 21rem;
-    overflow: hidden;
-    text-overflow: clip;
-    white-space: nowrap;
-}
-
-
-
 .nav {
     position: fixed;
     top: 3rem; right: 3rem;
@@ -165,7 +113,6 @@ h3.page-title {
     padding: 1.1rem 0.5rem;
     z-index: 25;
 }
-.nav .ico-menu a {}
 .nav .ico-menu a span.bar {
     position: absolute;
     top: 50%; left: 50%;
@@ -188,7 +135,6 @@ h3.page-title {
     top: 50%;
     transform: translate(-50%, -50%) rotate(-45deg);
 }
-
 .nav .gnb {
     position: fixed;
     top: 0;
@@ -198,9 +144,7 @@ h3.page-title {
     background-color: #272425;
     transition: 0.5s;
 }
-.nav .ico-menu.active + .gnb {
-    right: 0;
-}
+.nav .ico-menu.active + .gnb {right: 0;}
 .nav .gnb .menu {
     position: absolute;
     top: 50%;
@@ -224,9 +168,7 @@ h3.page-title {
     background-color: #000;
     transition: 0.3s;
 }
-.nav .gnb .menu ul li.active:after{
-    width: 100%;
-}
+.nav .gnb .menu ul li.active:after{width: 100%;}
 .nav .gnb .menu ul li a {
     display: block;
     color: #faf9f2;
@@ -242,25 +184,12 @@ h3.page-title {
     margin: 0 1.5rem 0.5rem 0;
 }
 
-.nav .indicator {}
-.nav .indicator ul {}
-.nav .indicator ul li {}
-.nav .indicator ul li a {}
-.nav .indicator ul li a span.dot {
-    display: block;
-    width: 1.2rem;
-    height: 1.2rem;
-    background-color: #333;
-    border-radius: 50%;
-    margin-bottom: 1rem;
-}
 
 /* story */
 #story {
     width: 100%;
     height: 100%;
-    background: #272425;
-    /* background: url(../img/family_bg.png) no-repeat center bottom /cover; */
+    background: url(../img/family_bg.png) no-repeat center bottom /cover;
     overflow: hidden;
     z-index: 100;
 }
@@ -273,7 +202,6 @@ h3.page-title {
     position: absolute;
     top: 10%; left: 50%;
     transform: translateX(-50%);
-
 }
 .story .together span {
     display: inline-block;
@@ -289,20 +217,15 @@ h3.page-title {
 .story .together span:nth-child(2n) {
     transition: 1s;
     transition-delay: 0.3s;
-    /* transform: translateY(20px) rotate(15deg); */
 }
 .story .together span:nth-child(2n+1) {
     transition-delay: 0.5s;
     transition: 1.2s;
-    /* transform: translateY(-20px) rotate(-15deg); */
 }
 .story.active .together span{
-    /* transform: translateY(0px) rotate(0deg); */
     visibility: visible;
     opacity: 1;
 }
-
-
 .story .fam-photo {
     position: absolute;
     bottom: 0; left: 50%;
@@ -325,7 +248,6 @@ h3.page-title {
     left: 33%;
     transition-delay: 1s;
 }
-
 .story .fam-photo .fam-wrap {position: relative;}
 .story .fam-photo .fam-wrap .bars > span {
     position: absolute;
@@ -334,10 +256,7 @@ h3.page-title {
     height: 2%;
     transition: 1s;
 }
-.story.active .together + .fam-photo .bars > span{
-    transition-delay: 1s;
-    width: 14%;
-}
+.story.active .together + .fam-photo .bars > span{width: 14%;}
 .story .fam-photo .fam-wrap .bars .black {background-color: black;}
 .story .fam-photo .fam-wrap .bars .white {background-color: white;}
 .story .fam-photo .fam-wrap .bars .black:nth-child(1) {top: 14%; left: 9%;}
@@ -361,7 +280,6 @@ h3.page-title {
     color: #fff;
     z-index: 10;
 }
-
 .story .synopsis {
     position: absolute;
     width: 30%;
@@ -389,22 +307,17 @@ h3.page-title {
     margin-bottom: 3rem;
 }
 
+
+
 /* family */
 #family {
     width: 100%;
     height: 100%;
-    /* background: url(../img/study1.png) no-repeat center top 30% /80%; */
-    /* background: url(../img/study1.png) no-repeat left 20% top 30% /35%; */
-    transition: 0.3s;
-}
-#family.change {
-    /* background: url(../img/study2.png) no-repeat center top 30% /80%; */
-    /* background: url(../img/parkhouse1.png) no-repeat right 20% top 30% /35%; */
 }
 .family {
+    position: relative;
     width: 100%;
     height: 100%;
-    position: relative;
 }
 .family .house {
     position: absolute;
@@ -443,9 +356,6 @@ h3.page-title {
     color: #fff;
     letter-spacing: 5px;
 }
-.family .house .gt-house {}
-.family .house .park-house {}
-
 
 .family .family-slide {
     position: absolute;
@@ -490,16 +400,10 @@ h3.page-title {
 }
 .family .family-slide .slide-nav a.close .bar:last-child{transform: translate(-50%, -50%) rotate(45deg);}
 
-/* .family .family-slide .bottom-box {
-    width: 100%;
-    height: 18rem;
-    background: #faf9f2;
-    position: absolute;
-    bottom: 0; left: 0;
-} */
-
-.family .family-slide .family-list {width: 100%; height: 100%;}
-
+.family .family-slide .family-list {
+    width: 100%; 
+    height: 100%;
+}
 .family .family-list .member {
     display: none;
     position: absolute;
@@ -513,7 +417,7 @@ h3.page-title {
     height: 100%;
 }
 .family .family-list .member .char .photo {
-    width: 25%;
+    width: 27%;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -576,34 +480,24 @@ h3.page-title {
     top: 27%;
     left: 65%;
 }
-.family .family-list .member.park .char .lines {
+.family .family-list.park .member .char .lines {
     left: 17%;
     text-align: right;
 }
-.family .family-list .member .char .lines span {
-    display: inline-block;
+.family .family-list .member .char .lines p {
     font-size: 3.4rem;
     font-weight: 600;
     color: #fff;
-    padding: 0 1rem;
     line-height: 1.4;
-    margin-bottom: 1rem;
 }
-/* .family .family-list .member .char .lines span {
-    display: inline-block;
-    font-size: 3.4rem;
-    font-weight: 600;
-    background-color: #fff;
-    color: black;
-    padding: 0 1rem;
-    line-height: 1.4;
-    margin-bottom: 1rem;
-} */
 
-.family .family-list .member:nth-child(3) .char .photo{left: 45%;}
-.family .family-list .member:nth-child(5) .char .photo{width: 32%;}
-.family .family-list .member:nth-child(4) .char .photo,
-.family .family-list .member:nth-child(6) .char .photo{width: 30%;}
+.family .family-list.gt .member:nth-child(2n) .char .photo {width: 30%;}
+.family .family-list.park .member:nth-child(1) .char .photo{width: 35%;}
+.family .family-list.park .member:nth-child(2) .char .photo{width: 30%;}
+.family .family-list.park .member:nth-child(3) .char .photo{width: 22%;}
+.family .family-list.park .member:nth-child(4) .char .photo{width: 25%;}
+
+
 
 /* 메타포 */
 #metaphor {
@@ -612,14 +506,13 @@ h3.page-title {
     background: #447d52;
 }
 .metaphor {
-    height: 100%;
     position: relative;
+    height: 100%;
     overflow: hidden;
 }
 .metaphor .smell {
     position: absolute;
-    top: 65%;
-    left: 50%;
+    top: 65%; left: 50%;
     transform: translate(-50%, -50%);
     width: 30%;
     color: #fff;
@@ -636,16 +529,13 @@ h3.page-title {
 .metaphor .smell p {
     font-size: 2rem;
     line-height: 1.4;
-    padding: 1.2rem 12rem;
+    padding: 1.2rem;
 }
 .metaphor .smell em {
     display: block;
     font-size: 1.6rem;
 }
-
-.metaphor .item > div {
-    position: absolute;
-}
+.metaphor .item > div {position: absolute;}
 .metaphor .item > div p {
     font-size: 2rem;
     background-color: #fff;
@@ -655,11 +545,7 @@ h3.page-title {
     text-align: center;
     box-sizing: border-box;
 }
-
-.metaphor .item .stone {
-    top: 18%; left: 10%;
-
-}
+.metaphor .item .stone {top: 18%; left: 10%;}
 .metaphor .item > div {
     transition: 1s;
     visibility: hidden;
@@ -728,8 +614,6 @@ h3.page-title {
     }
 }
 
-
-
 .metaphor .item .legs {
     bottom: 12%; left: 0%;
 }
@@ -780,7 +664,6 @@ h3.page-title {
     0px 5px 50px rgba(255, 233, 173,0.8),
     0px 8px 80px rgba(255, 233, 173,0.6),
     0px 8px 120px rgba(255, 233, 173,0.6);
-
 }
 .metaphor .item .bulb p {
     position: absolute;
@@ -795,29 +678,20 @@ h3.page-title {
     100% {
         opacity: 1;
     }
-
 }
+
 
 /* 어워드 */
 #award  {
+    position: relative;
     width: 100%;
     height: 100%;
-    position: relative;
-    /* background: url(../img/winner_bg.png) no-repeat center center / cover; */
 }
 .award {
+    position: relative;
     width: 100%;
     height: 100%;
-    position: relative;
 }
-/* .award:after {
-    content: "";
-    position: absolute;
-    bottom: 0; left: 0;
-    width: 100%;
-    height: 15rem;
-    background-color: #faf9f2;
-} */
 .award > div {
     position: absolute;
     width: 50%;
@@ -833,7 +707,6 @@ h3.page-title {
     right: 10%;
     opacity: 0;
 }
-
 .award.active .left-box {
     top: 0; left: 0;
     transform: none;
@@ -844,7 +717,6 @@ h3.page-title {
     opacity: 1;
     transform: none;
 }
-
 .award .oscars {
     position: absolute;
     top: 50%;
@@ -853,21 +725,25 @@ h3.page-title {
     width: 70%;
     z-index: 10;
 }
-
 .award .oscars:after {
     content: "← CLICK";
-    display: none;
     position: absolute;
     top: 13%;
     right: 33%;
     color: #fff;
     font-size: 2.2rem;
     font-weight: bold;
+    opacity: 0; 
+    visibility: hidden;
+    transition: 0.3s;
     animation: bounce 0.5s infinite alternate;
 }
-.award.active .oscars:after {
-    display: block;
+.award.active .oscars:after {    
+    opacity: 1; 
+    visibility: visible;
+    transition-delay: 1s;
 }
+
 @keyframes bounce {
     0% {transform: scale(1.1)}
     100% {transform: scale(1)}
@@ -901,20 +777,20 @@ h3.page-title {
     width: 85%;
     margin: 0 auto;
 }
+.award .bong .interview {
+    position: absolute;
+    top: -55%; left: 50%;
+    transform: translate(-50%);
+    width: 80%;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: 1s;
+}
 .award .bong.active .interview {
     transition-delay: .5s;
     opacity: 1;
     visibility: visible;
-}
-.award .bong .interview {
-    position: absolute;
-    top: -50%; left: 50%;
-    transform: translate(-50%);
-    width: 80%;
-    text-align: center;
-    transition: 0.5s;
-    opacity: 0;
-    visibility: hidden;
 }
 .award .bong .interview p {
     font-size: 2rem;
@@ -928,10 +804,7 @@ h3.page-title {
     font-size: 3rem;
     font-weight: bold;
     margin: 1rem 0;
-
 }
-
-
 .award .winner {
     position: absolute;
     top: 11%;
@@ -941,7 +814,6 @@ h3.page-title {
     font-weight: 900;
     line-height: 1.2;
 }
-
 .award .winner .shining {
     display: block;
     background: linear-gradient(135deg, #e7cf85, #fff, #e0c05e);
@@ -949,7 +821,6 @@ h3.page-title {
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color:  rgba(183, 162, 97, 0.3);
-
 }
 .award .winner .shining.animation {animation: shine 2s linear;}
 .award .video {
@@ -964,8 +835,6 @@ h3.page-title {
     width: 88%;
     border-top: 0.5px solid #faf9f2;
     border-bottom: 0.5px solid #faf9f2;
-    /* opacity: 0; */
-
 }
 .award .media p {
     font-size: 2em;
@@ -978,7 +847,6 @@ h3.page-title {
     font-size: 1.6rem;
     text-align: right;
 }
-
 .award .trophy {
     position: absolute;
     top: 37%;
@@ -1028,7 +896,6 @@ h3.page-title {
     overflow: hidden;
     background: #272425;
 }
-.footer {}
 .footer .sibling {
     position: absolute;
     bottom: -5%; right: -30%;
@@ -1037,95 +904,102 @@ h3.page-title {
     cursor: pointer;
 }
 .footer.active .sibling {right: 0;}
-.footer .trailer {
+.footer .view-box {
     opacity: 0;
     visibility: hidden;
     width: 0; height: 0;
     position: absolute;
-    top: 55%; left: 70%;
+    top: 80%; left: 90%;
     transform: translate(-50%,-50%);
     background-color: #faf9f2;
     padding: 2rem 2rem 0 2rem ;
     transition: 1s;
 }
-.footer .trailer.animation {
+.footer .view-box.animation {
     opacity: 1;
     visibility: visible;
+    top: 50%; left: 45%;
+    width: 50%; height: auto;
+}
+.footer .view-box .trailer {position: relative;}
+.footer .view-box .trailer .play-overlay {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+}
+.footer .view-box .trailer:hover .play-overlay {
+    opacity: 1;
+    visibility: visible;
+}
+.footer .view-box .trailer .play {
+    position: absolute;
     top: 50%; left: 50%;
-    width: auto; height: auto;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    z-index: 999;
 }
-.footer .trailer .video {
-    position : relative;
-	width : 100%;
-	height : 0;
-	padding-bottom : 56.25%;
-}
-.footer .trailer .video iframe {
-    position : absolute;
-	top : 0;
-	left : 0;
-	width : 100%;
-	height : 100%;
+.footer .view-box .trailer .play svg {
+    width: 100px;
+    height: 100px;
 }
 
-.footer .trailer .infor {
+.footer .view-box .infor {
     display: flex;
     justify-content: space-between;
     margin: 2.5rem auto;
 }
-.footer .trailer .infor .left {}
-.footer .trailer .infor .left ul.cast {
+.footer .view-box .infor .left ul.cast {
     display: flex;
     margin-bottom: 1.2rem;
 }
-.footer .trailer .infor .left ul.cast li {
+.footer .view-box .infor .left ul.cast li {
     width: 70%;
     font-size: 2.2rem;
     font-weight: bold;
     letter-spacing: 0.5rem;
     margin-right: 1.5rem;
 }
-.footer .trailer .infor .left p {
+.footer .view-box .infor .left p {
     font-size: 1.8rem;
     margin-bottom: 3rem;
     font-weight: 300;
     letter-spacing: 1px;
 }
-.footer .trailer .infor .left em {
+.footer .view-box .infor .left em {
     font-size: 2.6rem;
     letter-spacing: 0.5rem;
 }
+.footer .view-box .infor .right {width: 30%;}
 
-.footer .trailer .infor .right {width: 30%;}
-.footer .trailer .infor .right .logo {}
+/* 트레일러 */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 999;
+}
+.modal {position: absolute;}
+.modal-close {
+    position: absolute;
+    top: 24px; right: 24px;
+    display: block;
+    width: 32px;
+    height: 32px;
+    border: none;
+    color: transparent;
+    background: url(../img/close.svg) no-repeat;
+    background-size: 32px 32px;
+}
+body.modal-on {overflow : hidden;}
 
-
-  @keyframes bounce-out {
-    0% {
-      top: -200%;
-    }
-    25% {
-      top: 50%;
-    }
-    40% {
-      top: 35%;
-    }
-    55% {
-      top: 50%;
-    }
-    70% {
-      top: 42%;
-    }
-    85% {
-      top: 50%;
-    }
-    95% {
-      top: 48%;
-    }
-    100% {
-      top: 50%;
-    }
-  }
 
 @media (max-width: 1290px) {
     html{font-size: 9px;}

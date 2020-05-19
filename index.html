@@ -12,8 +12,6 @@
         <!-- CSS -->
         <link rel="stylesheet" href="css/reset.css">
         <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="css/swiper.css">
-        <link rel="stylesheet" href="css/font-awesome.css">
 
         <!-- favicon -->
         <link rel="shortcut icon" href="icons/favicon.ico">
@@ -27,6 +25,7 @@
         <script src="https://code.jquery.com/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.js"></script>
         <script src="js/main.js"></script>
+        <script src="js/iframe_api.js"></script>
         
         <!-- HTLM5shiv ie6~8 -->
         <!--[if lt IE 9]> 
@@ -42,25 +41,23 @@
         <header id="header" class="page">
             <div class="header">
                 <div class="main-box">
-
                     <div class="front-view">
                         <div class="title-en">
                             <h1>
-                                <img src="img/parasite_black.png" alt="parasite">
-                            </h1>
+                                    <img src="img/parasite_black.png" alt="parasite">
+                        </h1>
                             <div class="bar"></div>
                         </div>
-                    </div> <!-- parasite -->
+                    </div> <!-- front-view -->
 
                     <div class="back-view">
                         <div class="title-kor">
-                            <img src="img/font_white.png" alt="기생충">
+                            <a href="#">
+                                <img src="img/font_white.png" alt="기생충">
+                            </a>
                         </div>
                         <div class="poster">
                             <img src="img/poster2.jpg" class="poster-bg" alt="poster">
-                        </div>
-                        <div class="happy">
-                            <em>행복은 나눌수록 커지잖아요.</em>
                         </div>
                     </div>
 
@@ -86,17 +83,15 @@
                             </div>
                         </div>  <!-- //gnb -->
                     </nav>
-
-                    
-
-                </div> <!--// main-box-->
-            </div> <!-- // header -->
+                </div> <!--//main-box-->
+            </div> <!-- //header -->
         </header>
         <!-- //header -->
 
+
         <section id="story" class="page">
             <div class="story">
-                <h3 class="page-title"><span class="mark"></span>STORY</h3>
+                <h2 class="page-title"><span class="mark"></span>STORY</h2>
                 <div class="together">
                     <span>같이</span>
                     <span>잘</span>
@@ -121,7 +116,7 @@
                     <div class="summary">
                         <em>극과 극의 삶을 사는 두 가족의 만남이 빚어낸 신선한 스토리</em>
                     </div>
-                </div>
+                </div> <!-- //fam-photo -->
                 <div class="synopsis">
                     <p>
                         전원백수로 살 길 막막하지만 사이는 좋은 기택 가족.<br>
@@ -132,14 +127,15 @@
                     <p>
                         그러나 이렇게 시작된 두 가족의 만남 뒤로, 걷잡을 수 없는 사건이 기다리고 있었으니…
                     </p>
-                </div>
-            </div>
+                </div> <!-- //synopsis -->
+            </div>  <!-- //story -->
         </section>
+        <!-- //story -->
 
         
         <section id="family" class="page">
             <div class="family">
-                <h3 class="page-title"><span class="mark"></span>family</h3>
+                <h2 class="page-title"><span class="mark"></span>family</h2>
                 <div class="house">
                     <div class="gt-house">
                         <a href="#">
@@ -153,9 +149,7 @@
                             <div class="overlay"><em>박사장네</em></div>
                         </a>
                     </div>
-                </div>
-
-
+                </div> <!-- //house -->
                 <div class="family-slide">
                     <div class="slide-nav">
                         <a href="#" class="prev"><span class="ir_so">prev</span></a>
@@ -165,54 +159,46 @@
                             <span class="bar"></span>
                         </a>
                     </div>
- 
                     <div class="bottom-box"></div>
-                    <div class="family-list">
-                        
+                    <div class="family-list gt">
                         <div class="member">
                             <div class="char">
                                 <div class="photo">
                                     <img src="img/cast01.png" alt="송강호/기택">
                                 </div>
                                 <div class="desc">
-                                    <span>전원 백수의 가장</span>
                                     <strong>송강호</strong>
                                     <em class="name">기택</em>
                                     <p>직업도 대책도 없지만 사람 좋고 태평하며 가족을 사랑한다.</p>
                                 </div>
-
                                 <div class="lines">
-                                    <span>“아들아, 역시 너는 </span><br>
-                                    <span>계획이 다 있구나!”</span>
+                                    <p>“아들아, 역시 너는<br>계획이 다 있구나!”</p>
                                 </div>
                             </div>
                         </div> <!-- member -->
 
-                        <div class="member gt">
+                        <div class="member">
                             <div class="char">
                                 <div class="photo">
                                     <img src="img/cast02.png" alt="장혜진/충숙">
                                 </div>
                                 <div class="desc">
-                                    <span>전원백수 가족의 엄마</span>
                                     <em class="name">충숙</em>
                                     <strong>장혜진</strong>
                                     <p>하는 일마다 안 풀리는 남편과 살아서인지 ‘기택’보다 더 박력 있고 다부지다. </p>
                                 </div> 
                                 <div class="lines">
-                                    <span>“돈이 다리미라구.</span><br>
-                                    <span>돈이 주름살을 쫘악~ 펴줘”</span>
+                                    <p>“돈이 다리미라구.<br>돈이 주름살을 쫘악~ 펴줘”</p>
                                 </div>
                             </div>
                         </div> <!-- member -->
 
-                        <div class="member gt">
+                        <div class="member">
                             <div class="char">
                                 <div class="photo">
                                     <img src="img/cast03.png" alt="최우식/기우">
                                 </div>
                                 <div class="desc">
-                                    <span>전원백수 가족의 장남</span>
                                     <em class="name">기우</em>
                                     <strong>최우식</strong>
                                     <p>네 번의 대입 실패 후 백수로 지내는 장남.
@@ -220,19 +206,17 @@
                                         가고 온 가족의 희망이 된다.</p>
                                 </div>
                                 <div class="lines">
-                                    <span>“아버지, 전 이게 위조나</span><br>
-                                    <span>범죄라고 생각하지 않아요”</span>
+                                    <p>“아버지, 전 이게 위조나<br>범죄라고 생각하지 않아요”</p>
                                 </div>
                             </div>
                         </div> <!-- member -->
 
-                        <div class="member gt">
+                        <div class="member">
                             <div class="char">
                                 <div class="photo">
                                     <img src="img/cast04.png" alt="박소담/기정">
                                 </div>
                                 <div class="desc">
-                                    <span>전원백수 가족의 딸</span>
                                     <em class="name">기정</em>
                                     <strong>박소담</strong>
                                     <p>미대에 떨어진 후 백수로 지낸다.
@@ -240,8 +224,7 @@
                                         경우에도 당당하다.</p>
                                 </div>
                                 <div class="lines">
-                                    <span>“그 검은 상자를</span><br>
-                                    <span>저와 함께 열어보시겠어요?”</span>
+                                    <p>“그 검은 상자를<br>저와 함께 열어보시겠어요?”</p>
                                 </div>
                             </div>
                         </div> <!-- member -->
@@ -257,14 +240,13 @@
                             <span class="bar"></span>
                         </a>
                     </div>
-                    <div class="family-list">
-                        <div class="member park">
+                    <div class="family-list park">
+                        <div class="member">
                             <div class="char">
                                 <div class="photo">
                                     <img src="img/cast05.png" alt="이선균/박사장">
                                 </div>
                                 <div class="desc">
-                                    <span>글로벌 IT기업 CEO</span>
                                     <em class="name">박사장</em>
                                     <strong>이선균</strong>
                                     <p>회사를 스스로 일군 유능함에다 아름다운
@@ -272,101 +254,93 @@
                                         여러모로 대조적인 가정이다.</p>
                                 </div>
                                 <div class="lines">
-                                    <span>“선을 넘는 사람들,,</span><br>
-                                    <span>내가 제일 싫어하는데... ”</span>
+                                    <p>“선을 넘는 사람들,,<br>내가 제일 싫어하는데... ”</p>
                                 </div>
                             </div>
                         </div> <!-- member -->
 
-                        <div class="member park">
+                        <div class="member">
                             <div class="char">
                                 <div class="photo">
                                     <img src="img/cast06.png" alt="조여정/연교">
                                 </div>
                                 <div class="desc">
-                                    <span>박사장 집 사모님</span>
                                     <em class="name">연교</em>
                                     <strong>조여정</strong>
                                     <p>박사장의 아내. 성격이 심플하고 순진해서
                                         남을 잘 믿지만 정작 본인은 그런 점을 모른다.
                                 </div>
                                 <div class="lines">
-                                    <span>“내가 사람을 잘 못 믿잖아.</span><br>
-                                    <span>잘 아는 사람 소개 아니면”</span>
+                                    <p>“내가 사람을 잘 못 믿잖아.<br>잘 아는 사람 소개 아니면”</p>
                                 </div>
                             </div>
                         </div> <!-- member -->
 
-                        <div class="member park">
+                        <div class="member">
                             <div class="char">
                                 <div class="photo">
                                     <img src="img/cast07.png" alt="정지소/다혜">
                                 </div>
                                 <div class="desc">
-                                    <span>박사장 집 딸</span>
                                     <em class="name">다혜</em>
                                     <strong>정지소</strong>
                                     <p>기우가 과외를 하게 된 예민한 사춘기 고2학생이다.</p>
                                 </div>
                                 <div class="lines">
-                                    <span>“나 영어공부 하면 안돼?</span><br>
-                                    <span>선생님 오시라고 해서?”</span>
+                                    <p>“나 영어공부 하면 안돼?</p>
                                 </div>
                             </div>
                         </div> <!-- member -->
 
-                        <div class="member park">
+                        <div class="member">
                             <div class="char">
                                 <div class="photo">
                                     <img src="img/cast08.png" alt="정현준/다송">
                                 </div>
                                 <div class="desc">
-                                    <span>박사장 집 아들</span>
                                     <em class="name">다송</em>
                                     <strong>정현준</strong>
                                     <p>다혜의 동생. 엉뚱하고 산만한 초등학교 3학년이다.</p>
                                 </div>
                                 <div class="lines">
-                                    <span>“오늘 날씨는 맑으다 오버.</span><br>
-                                    <span>비구름은 아니구려 오버”</span>
+                                    <p>“오늘 날씨는 맑으다 오버.<br>비구름은 아니구려 오버”</p>
                                 </div>
                             </div>
                         </div> <!-- member -->
 
-                        <div class="member park">
+                        <div class="member">
                             <div class="char">
                                 <div class="photo">
                                     <img src="img/cast09.png" alt="이정은/문광">
                                 </div>
                                 <div class="desc">
-                                    <span>박사장 집 입주 가사도우미</span>
                                     <em class="name">문광</em>
                                     <strong>이정은</strong>
                                     <p>오랫동안 터줏대감처럼 박사장 집에서 일해온 가사전문가이다.</p>
                                 </div>
                                 <div class="lines">
-                                    <span>"싸모님, 매실청 좀 드실래요?</span><br>
-                                    <span>긴장 확 풀리게”</span>
+                                    <p>"싸모님, 매실청 좀 드실래요?<br>긴장 확 풀리게”</p>
                                 </div>
                             </div>
                         </div> <!-- member -->
-
                     </div> <!-- //family-list-->                  
                 </div> <!-- //family-slide-->
-            </div>
+            </div> <!-- // family -->
         </section>
+        <!-- // family -->
         
+
+
         <section id="metaphor" class="page">
             <div class="metaphor">
-                <h3 class="page-title"><span class="icon mark"></span>Metaphor</h3>
+                <h2 class="page-title"><span class="icon mark"></span>Metaphor</h2>
 
                 <div class="smell">
                     <img src="img/smell.gif" alt="냄새">
                     <p>“부자와 가난한 사람들은 동선이 겹치지 않기 때문에<br>
                         서로의 냄새를 맡을 기회가 없다 ”</p>
                     <em>봉준호</em>
-                    <!-- <img src="img/smell.png" alt="냄새"> -->
-                </div>
+                </div> <!-- //smell -->
 
                 <div class="item">
                     <div class="stone">
@@ -375,35 +349,39 @@
                         </a>              
                             <p>얘가 자꾸 나한테 달라붙는 거예요. 
                                 진짜로, 얘가 진짜, 자꾸 따라와요.</p>
-                    </div>
+                    </div> <!-- //stone -->
+
                     <div class="painting">
                         <a href="img/painting.png">
                             <img src="img/painting_black.png" alt="자화상">
                         </a>
                             <p>“자화상이에요.”</p>  
-                    </div>
+                    </div> <!-- //painting -->
+
                     <div class="bulb">
                         <a href="img/bulb.png">
                             <img src="img/bulb_black.png" alt="전구">
                             <span class="light"></span>
                         </a>
                         <p>“H E L P”</p>
-                    </div>
+                    </div> <!-- //bulb -->
+
                     <div class="legs">
                         <a href="img/legs.png">
                             <img src="img/legs_black.png" alt="다리">
                         </a>
                         <p>“저희는 불우해요. 저희는 돈도 없고 
                             집도 없고 빚만 잔뜩 있어요.”</p>
-                    </div>
+                    </div> <!-- //legs -->
                 </div> <!-- //item -->
             </div> <!-- //metaphor-->
         </section>
             <!-- //metaphor -->
 
+
         <section id="award" class="page">
             <div class="award">
-                <h3 class="page-title"><span class="icon mark"></span>Award</h3>
+                <h2 class="page-title"><span class="icon mark"></span>Award</h2>
 
                     <div class="left-box">
                         <div class="oscars">
@@ -422,19 +400,16 @@
                                 </p>
                             </div>
                         </div>
-                    </div>
+                    </div>  <!-- //left-box-->
                     
-                
                     <div class="right-box">
                         <div class="winner">
                             <span class="shining">PARASITE IS BEST PICTURE<br>
                             OSCARS 2020 WINNER</span>
                         </div>
-    
                         <div class="video">
                             <img src="img/oscars.gif" alt="오스카 수상">
                         </div>
-    
                         <div class="media">
                             <p>
                                 &lt;기생충&gt;은 '외국어 영화는 최우수 작품상을 받을 수 없다'는
@@ -444,7 +419,6 @@
                                 <strong> - 인디와이어</strong>
                             </p>
                         </div>
-    
                         <div class="trophy">
                             <ul>
                                 <li><span></span><em>Best Picture</em></li>
@@ -452,10 +426,8 @@
                                 <li><span></span><em>Best International Feature Film</em></li>
                                 <li><span></span><em>Best Writing (Original Screenplay).</em></li>
                             </ul>  
-                        </div> <!-- //trophy-->
-                    </div>
-                    
-
+                        </div> 
+                    </div>  <!-- //right-box-->
             </div> <!-- //award -->
         </section>
         <!-- //award-->
@@ -463,14 +435,19 @@
 
         <footer id="footer" class="page">
             <div class="footer">
-                <h3 class="page-title"><span class="icon mark"></span>Trailer</h3>
+                <h2 class="page-title"><span class="icon mark"></span>Trailer</h2>
                 <div class="sibling">
                     <img src="img/wifi.png" alt="기정,기우">
                 </div>
-                <div class="trailer">
-                    <div class="video">
-                        <iframe width="768" height="451" src="https://www.youtube.com/embed/jBdRhhSt3Bc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
+                <div class="view-box">
+                    <div class="trailer">
+                        <div class="play-overlay">
+                            <div class="play" id="showTrailer" data-youtube="isOGD_7hNIY">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="48px" height="48px"><path d="M0 0h24v24H0z" fill="none"/><path d="M10 16.5l6-4.5-6-4.5v9zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>
+                            </div>
+                        </div>
+                        <img src="img/trailer.jpg" alt="트레일러">
+                    </div>  <!-- //trailer-->
                     <div class="infor">
                         <div class="left">
                             <ul class="cast">
@@ -490,10 +467,19 @@
                             </div>
                         </div>
                     </div>  <!-- infor -->
-                </div>  <!-- //trailer-->
+                </div>
             </div>  <!-- //footer-->
         </footer>
         <!-- // footer -->
+
+        <!-- 트레일러 -->
+        <aside id="blackout" class="overlay">
+            <div id="trailerModal" class="modal">
+                <div id="trailer"></div> <!-- YouTube 플레이어로 대체되는 부분-->
+            </div>
+            <button id="hideTrailer" class="modal-close"><span class="ir_so">닫기</span></button>
+        </aside>
+
 
 
     </body>
